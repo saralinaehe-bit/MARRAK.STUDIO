@@ -28,7 +28,7 @@ export default function Home() {
     <div className="home">
       <section className="hero">
         <div className="hero-content">
-          <h1 className="hero-logo">MARRAKECH</h1>
+          <img src="/MARRAK.png" alt="MARRAK" className="hero-logo-image" />
           <p className="hero-subtitle">Handcrafted Moroccan Rugs</p>
         </div>
       </section>
@@ -104,7 +104,7 @@ export default function Home() {
             </a>
           </div>
           <div className="footer-copy">
-            <p>&copy; 2026 Marrakech Rugs. All rights reserved.</p>
+            <p>&copy; 2026 MARRAK. All rights reserved.</p>
           </div>
         </div>
       </footer>

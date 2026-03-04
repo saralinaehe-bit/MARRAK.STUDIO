@@ -5,13 +5,13 @@ export default function Navigation() {
     <nav className="navigation">
       <div className="nav-container">
         <Link to="/" className="logo">
-          <img src="/MARRAK.png" alt="MARRAK" className="logo-image" />
+          MARRAK STUDIO
         </Link>
         <div className="nav-links">
           <Link to="/">Home</Link>
           <Link to="/shop">Shop</Link>
-          <Link to="/about">About</Link>
-          <Link to="/journal">Journal</Link>
+          <Link to="/about">Trade</Link>
+          <Link to="/journal">Our Story</Link>
           <Link to="/contact">Contact</Link>
         </div>
       </div>

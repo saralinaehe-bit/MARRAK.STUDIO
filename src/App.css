@@ -95,13 +95,10 @@ button {
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo-image {
-  height: 32px;
-  width: auto;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 
 .nav-links {
@@ -651,8 +648,8 @@ button {
     font-size: 12px;
   }
 
-  .logo-image {
-    height: 24px;
+  .logo {
+    font-size: 16px;
   }
 
   .hero-logo-image {

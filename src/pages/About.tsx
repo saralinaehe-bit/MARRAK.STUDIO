@@ -3,7 +3,7 @@ export default function About() {
     <div className="about-page">
       <div className="container">
         <div className="about-hero">
-          <h1 className="page-title">About Marrakech</h1>
+          <h1 className="page-title">Trade</h1>
         </div>
 
         <div className="about-content-grid">
@@ -15,30 +15,30 @@ export default function About() {
           </div>
 
           <div className="about-text-block">
-            <h2>Craftsmanship & Philosophy</h2>
+            <h2>Trade Program</h2>
             <p>
-              We work with master weavers in the medina of Marrakech to create
-              contemporary rugs that honor centuries-old Berber traditions. Each
-              piece is handwoven using natural wool and time-honored techniques.
+              MARRAK STUDIO works with interior designers, architects, and
+              hospitality projects worldwide. We offer exclusive access to our
+              curated collection and bespoke design services.
             </p>
             <p>
-              Our aesthetic is minimal, architectural, and refined. We believe
-              in the beauty of natural materials, neutral tones, and the subtle
-              variations that make each rug unique.
+              Our trade program includes preferential pricing, custom sizing,
+              and priority access to new collections. We can also work with you
+              to create unique pieces tailored to your project specifications.
             </p>
           </div>
 
           <div className="about-text-block">
-            <h2>Materials & Process</h2>
+            <h2>Custom Commissions</h2>
             <p>
-              We use only the finest natural wool, sourced from local cooperatives.
-              Each rug takes weeks to complete, woven entirely by hand on traditional
-              wooden looms.
+              We collaborate with our master weavers to create custom rugs that
+              meet your exact requirements. From size and color to pattern and
+              materials, every detail can be tailored to your vision.
             </p>
             <p>
-              The wool is hand-dyed using natural pigments, resulting in rich,
-              earthy tones that age beautifully over time. No two rugs are exactly
-              alike.
+              Custom pieces typically require 8-12 weeks from design approval
+              to completion. Contact us to discuss your project and receive a
+              detailed proposal.
             </p>
           </div>
 

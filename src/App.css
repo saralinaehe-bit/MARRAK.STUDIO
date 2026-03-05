@@ -92,9 +92,33 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+}
+
+.menu-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  width: 24px;
+  height: 1.5px;
+  background: var(--color-text);
+  transition: all 0.3s ease;
 }
 
 .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
 }
@@ -123,19 +147,73 @@ button {
   margin-top: -2px;
 }
 
-.nav-links {
+.cart-icon {
+  width: 40px;
+  height: 40px;
   display: flex;
-  gap: var(--spacing-lg);
-  font-size: 14px;
-  letter-spacing: 0.5px;
-}
-
-.nav-links a {
+  align-items: center;
+  justify-content: center;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.cart-icon:hover {
   color: var(--color-brown);
+}
+
+.nav-menu {
+  position: fixed;
+  top: 72px;
+  left: -320px;
+  width: 320px;
+  height: calc(100vh - 72px);
+  background: var(--color-ivory);
+  transition: left 0.3s ease;
+  z-index: 999;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-menu.open {
+  left: 0;
+}
+
+.nav-menu-content {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.nav-menu-content a {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 400;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  padding-left: 0;
+}
+
+.nav-menu-content a:hover {
+  color: var(--color-brown);
+  padding-left: 8px;
+}
+
+.nav-overlay {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 998;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .hero {
@@ -595,6 +673,28 @@ button {
   margin: 0 auto;
 }
 
+.cart-page {
+  padding-top: 120px;
+  padding-bottom: var(--spacing-xxl);
+  min-height: 80vh;
+}
+
+.cart-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.cart-empty {
+  text-align: center;
+  padding: var(--spacing-xxl) 0;
+}
+
+.cart-empty p {
+  font-size: 18px;
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
 .journal-placeholder {
   text-align: center;
   padding: var(--spacing-xxl) 0;
@@ -665,11 +765,6 @@ button {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    gap: var(--spacing-md);
-    font-size: 12px;
-  }
-
   .logo-main {
     font-size: 18px;
     letter-spacing: 6px;
@@ -678,6 +773,19 @@ button {
   .logo-sub {
     font-size: 8px;
     letter-spacing: 3px;
+  }
+
+  .nav-menu {
+    width: 280px;
+    left: -280px;
+  }
+
+  .nav-menu-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .nav-menu-content a {
+    font-size: 24px;
   }
 
   .hero-logo-image {

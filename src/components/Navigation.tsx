@@ -5,7 +5,10 @@ export default function Navigation() {
     <nav className="navigation">
       <div className="nav-container">
         <Link to="/" className="logo">
-          <img src="/Design_sans_titre_(12).png" alt="MARRAK STUDIO" className="logo-image" />
+          <div className="logo-text">
+            <div className="logo-main">MARRAK</div>
+            <div className="logo-sub">STUDIO</div>
+          </div>
         </Link>
         <div className="nav-links">
           <Link to="/">Home</Link>

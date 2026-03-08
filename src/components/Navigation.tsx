@@ -7,7 +7,6 @@ export default function Navigation() {
         <div className="nav-left">
           <Link to="/shop">SHOP</Link>
           <Link to="/about">CRAFT</Link>
-          <Link to="/journal">OUR STORY</Link>
         </div>
 
         <Link to="/" className="logo">
@@ -18,6 +17,7 @@ export default function Navigation() {
         </Link>
 
         <div className="nav-right">
+          <Link to="/journal">OUR STORY</Link>
           <Link to="/contact">VISIT US</Link>
           <Link to="/cart" className="cart-icon" aria-label="Shopping cart">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

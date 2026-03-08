@@ -170,8 +170,8 @@ button {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
-    url('https://images.pexels.com/photos/6207842/pexels-photo-6207842.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('/Beni_for_DWR_Fences_Wool_Moroccan_Rug_Desert_Rose_(1).jpg') center/cover;
   display: flex;
   align-items: center;
   justify-content: center;

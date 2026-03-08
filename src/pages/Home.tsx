@@ -27,10 +27,6 @@ export default function Home() {
   return (
     <div className="home">
       <section className="hero">
-        <div className="hero-content">
-          <img src="/MARRAK.png" alt="MARRAK" className="hero-logo-image" />
-          <p className="hero-subtitle">Handcrafted Moroccan Rugs</p>
-        </div>
       </section>
 
       <section className="brand-statement">

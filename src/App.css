@@ -170,17 +170,55 @@ button {
 
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url('/Beni_for_DWR_Fences_Wool_Moroccan_Rug_Desert_Rose_(1).jpg') center/cover;
+  background: url('/Beni_for_DWR_Fences_Wool_Moroccan_Rug_Desert_Rose_(1).jpg') center/cover;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   margin-top: 72px;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.05) 100%
+  );
+  z-index: 1;
 }
 
 .hero-content {
-  text-align: center;
-  color: white;
+  position: relative;
+  z-index: 2;
+  color: var(--color-ivory);
+  padding-left: var(--spacing-xxl);
+  max-width: 700px;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 72px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-ivory);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--color-sand);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
 }
 
 .hero-logo-image {
@@ -191,27 +229,6 @@ button {
   filter: brightness(0) invert(1);
 }
 
-.hero-subtitle {
-  font-size: 16px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-.brand-statement {
-  padding: var(--spacing-xxl) 0;
-  background: var(--color-sand);
-}
-
-.statement-text {
-  font-family: var(--font-serif);
-  font-size: 36px;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.5;
-  color: var(--color-charcoal);
-}
 
 .featured-collection {
   padding: var(--spacing-xxl) 0;

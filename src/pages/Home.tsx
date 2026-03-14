@@ -27,13 +27,10 @@ export default function Home() {
   return (
     <div className="home">
       <section className="hero">
-      </section>
-
-      <section className="brand-statement">
-        <div className="container">
-          <p className="statement-text">
-            Handcrafted Moroccan rugs. Architectural. Timeless.
-          </p>
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+          <h1 className="hero-title">WOVEN HERITAGE, ELEVATED.</h1>
+          <p className="hero-subtitle">From the Atlas Mountains to the world</p>
         </div>
       </section>
 

@@ -31,6 +31,7 @@ export default function Home() {
         <div className="hero-content">
           <h1 className="hero-title">WOVEN HERITAGE, ELEVATED.</h1>
           <p className="hero-subtitle">FROM THE ATLAS MOUNTAINS TO THE WORLD</p>
+          <Link to="/shop" className="hero-btn">SHOP RUGS</Link>
         </div>
       </section>
 

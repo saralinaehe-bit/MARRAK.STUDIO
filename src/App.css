@@ -199,6 +199,7 @@ button {
   color: var(--color-ivory);
   padding-left: 80px;
   max-width: 600px;
+  transform: translateY(-80px);
 }
 
 .hero-title {

@@ -197,13 +197,13 @@ button {
   position: relative;
   z-index: 2;
   color: var(--color-ivory);
-  padding-left: var(--spacing-xxl);
-  max-width: 700px;
+  padding-left: 80px;
+  max-width: 600px;
 }
 
 .hero-title {
   font-family: var(--font-serif);
-  font-size: 72px;
+  font-size: 56px;
   font-weight: 400;
   letter-spacing: 2px;
   line-height: 1.2;

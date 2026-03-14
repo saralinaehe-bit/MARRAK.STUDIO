@@ -30,7 +30,7 @@ export default function Home() {
         <div className="hero-overlay"></div>
         <div className="hero-content">
           <h1 className="hero-title">WOVEN HERITAGE, ELEVATED.</h1>
-          <p className="hero-subtitle">From the Atlas Mountains to the world</p>
+          <p className="hero-subtitle">FROM THE ATLAS MOUNTAINS TO THE WORLD</p>
         </div>
       </section>
 

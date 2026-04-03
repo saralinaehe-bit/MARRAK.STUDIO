@@ -24,18 +24,18 @@ export default function Shop() {
 
   return (
     <div className="shop-page">
-      <div className="container">
+      <div className="shop-container">
         <div className="shop-header">
-          <h1 className="page-title">Collection</h1>
-          <p className="page-subtitle">
-            Handcrafted rugs from the medina of Marrakech
+          <h1 className="collection-title">Rug Collection</h1>
+          <p className="collection-subtitle">
+            Handwoven heritage from the Atlas Mountains
           </p>
         </div>
 
         {loading ? (
           <div className="loading">Loading...</div>
         ) : (
-          <div className="product-grid">
+          <div className="luxury-grid">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}

@@ -68,40 +68,45 @@ export default function ProductDetail() {
         </div>
 
         <div className="product-details">
-          <h1 className="product-title">{product.name}</h1>
-          <p className="product-price">${product.price.toLocaleString()}</p>
+          <div className="product-header-section">
+            <h1 className="product-title">{product.name}</h1>
+            <p className="product-subtitle">Atlas Mountains, Morocco</p>
+          </div>
 
           <div className="product-specs">
-            <div className="spec-item">
-              <span className="spec-label">Dimensions</span>
+            <div className="spec-row">
+              <span className="spec-label">Size</span>
               <span className="spec-value">{product.dimensions}</span>
             </div>
-            <div className="spec-item">
+            <div className="spec-row">
               <span className="spec-label">Material</span>
               <span className="spec-value">{product.material}</span>
             </div>
-            <div className="spec-item">
+            <div className="spec-row">
               <span className="spec-label">Origin</span>
               <span className="spec-value">{product.origin}</span>
             </div>
-            <div className="spec-item">
-              <span className="spec-label">Availability</span>
-              <span className="spec-value">
-                {product.in_stock ? 'In Stock' : 'Sold Out'}
-              </span>
+          </div>
+
+          <div className="product-story">
+            <p className="story-text">{product.description}</p>
+            <p className="story-text">
+              Handwoven by master artisans in the heart of Morocco, this piece carries the heritage of generations.
+              Each knot and pattern tells a story of tradition, craftsmanship, and the timeless beauty of Amazigh culture.
+            </p>
+          </div>
+
+          <div className="product-actions">
+            <div className="product-price-line">
+              <span className="price-label">Price</span>
+              <span className="price-value">${product.price.toLocaleString()}</span>
             </div>
-          </div>
-
-          <div className="product-description">
-            <p>{product.description}</p>
-          </div>
-
-          <button className="btn-add-to-cart" disabled={!product.in_stock}>
-            {product.in_stock ? 'Inquire' : 'Sold Out'}
-          </button>
-
-          <div className="product-note">
-            <p>Each rug is unique. Contact us for detailed imagery and shipping information.</p>
+            <button className="btn-inquire" disabled={!product.in_stock}>
+              {product.in_stock ? 'Inquire About This Piece' : 'Sold'}
+            </button>
+            <p className="inquiry-note">
+              Each rug is a unique work of art. Contact us for additional imagery, detailed measurements, and shipping arrangements.
+            </p>
           </div>
         </div>
       </div>

@@ -13,6 +13,7 @@
   --color-charcoal: #3A3632;
   --color-text: #2C2824;
   --color-text-light: #7A7068;
+  --color-terracotta: #B87A5F;
 
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'Inter', sans-serif;
@@ -266,37 +267,73 @@ button {
   font-weight: 400;
 }
 
-.product-grid {
+.shop-page {
+  padding-top: 120px;
+  padding-bottom: var(--spacing-xxl);
+  background: var(--color-ivory);
+}
+
+.shop-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.shop-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.collection-title {
+  font-family: var(--font-serif);
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -0.5px;
+}
+
+.collection-subtitle {
+  font-size: 15px;
+  color: var(--color-text-light);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.luxury-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap: var(--spacing-lg);
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .product-card {
   display: block;
-  transition: transform 0.4s ease;
+  transition: opacity 0.3s ease;
 }
 
 .product-card:hover {
-  transform: translateY(-8px);
+  opacity: 0.95;
+}
+
+.product-image-container {
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: var(--color-sand);
+  margin-bottom: var(--spacing-md);
+  position: relative;
 }
 
 .product-image {
-  aspect-ratio: 4/5;
-  overflow: hidden;
-  background: var(--color-beige);
-  margin-bottom: var(--spacing-sm);
-}
-
-.product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.product-card:hover .product-image img {
-  transform: scale(1.05);
+.product-card:hover .product-image {
+  transform: scale(1.08);
 }
 
 .product-info {
@@ -305,8 +342,18 @@ button {
 
 .product-name {
   font-family: var(--font-serif);
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 400;
   margin-bottom: var(--spacing-xs);
+  letter-spacing: -0.3px;
+}
+
+.product-meta {
+  font-size: 13px;
+  color: var(--color-text-light);
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
 }
 
 .product-dimensions {
@@ -451,7 +498,7 @@ button {
 
 .main-image {
   aspect-ratio: 4/5;
-  background: var(--color-beige);
+  background: var(--color-sand);
   margin-bottom: var(--spacing-md);
   overflow: hidden;
 }
@@ -460,6 +507,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .image-gallery {
@@ -471,63 +519,145 @@ button {
 .gallery-thumb {
   aspect-ratio: 1;
   overflow: hidden;
-  background: var(--color-beige);
+  background: var(--color-sand);
   padding: 0;
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-thumb:hover {
+  border-color: var(--color-charcoal);
 }
 
 .gallery-thumb.active {
   border-color: var(--color-charcoal);
+  border-width: 2px;
 }
 
 .gallery-thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .product-details {
-  padding: var(--spacing-md) 0;
+  padding: 0;
+}
+
+.product-header-section {
+  margin-bottom: var(--spacing-xl);
 }
 
 .product-title {
   font-family: var(--font-serif);
-  font-size: 48px;
-  margin-bottom: var(--spacing-md);
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: var(--spacing-sm);
+  letter-spacing: -0.5px;
+  line-height: 1.1;
 }
 
-.product-price {
-  font-size: 28px;
-  margin-bottom: var(--spacing-lg);
+.product-subtitle {
+  font-size: 14px;
+  color: var(--color-text-light);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 .product-specs {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding: var(--spacing-lg) 0;
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
 }
 
-.spec-item {
+.spec-row {
   display: flex;
   justify-content: space-between;
   padding: var(--spacing-sm) 0;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .spec-label {
   color: var(--color-text-light);
+  font-weight: 300;
 }
 
 .spec-value {
   font-weight: 400;
+  text-align: right;
 }
 
-.product-description {
+.product-story {
+  margin-bottom: var(--spacing-xxl);
+}
+
+.story-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-md);
+  font-weight: 300;
+}
+
+.product-actions {
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: var(--spacing-lg);
+}
+
+.product-price-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: var(--spacing-lg);
+}
+
+.price-label {
+  font-size: 14px;
+  color: var(--color-text-light);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.price-value {
+  font-family: var(--font-serif);
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.btn-inquire {
+  width: 100%;
+  padding: 18px;
+  background: var(--color-charcoal);
+  color: white;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: none;
+  margin-bottom: var(--spacing-md);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: var(--font-sans);
+}
+
+.btn-inquire:hover {
+  background: var(--color-brown);
+}
+
+.btn-inquire:disabled {
+  background: var(--color-text-light);
+  cursor: not-allowed;
+}
+
+.inquiry-note {
+  font-size: 13px;
   line-height: 1.8;
   color: var(--color-text-light);
+  text-align: center;
+  font-weight: 300;
 }
 
 .btn-add-to-cart {
@@ -722,6 +852,11 @@ button {
     max-width: 300px;
   }
 
+  .luxury-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
   .product-grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   }
@@ -741,6 +876,10 @@ button {
   .product-images {
     position: relative;
     top: 0;
+  }
+
+  .product-title {
+    font-size: 42px;
   }
 
   .about-content-grid {
@@ -801,12 +940,24 @@ button {
     font-size: 32px;
   }
 
+  .collection-title {
+    font-size: 38px;
+  }
+
+  .product-name {
+    font-size: 24px;
+  }
+
   .product-grid {
     grid-template-columns: 1fr;
   }
 
   .product-title {
     font-size: 36px;
+  }
+
+  .price-value {
+    font-size: 28px;
   }
 
   .page-title {

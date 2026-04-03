@@ -11,7 +11,7 @@ export default function Shop() {
       const { data, error } = await supabase
         .from('products')
         .select('*')
-        .order('created_at', { ascending: false });
+        .order('display_order', { ascending: true });
 
       if (!error && data) {
         setProducts(data);

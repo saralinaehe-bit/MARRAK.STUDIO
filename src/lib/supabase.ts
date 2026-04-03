@@ -19,6 +19,7 @@ export type Product = {
   gallery_images: string[];
   featured: boolean;
   in_stock: boolean;
+  display_order: number;
   created_at: string;
 };
 

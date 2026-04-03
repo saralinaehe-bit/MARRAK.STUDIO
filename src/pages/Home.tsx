@@ -13,6 +13,7 @@ export default function Home() {
         .from('products')
         .select('*')
         .eq('featured', true)
+        .order('display_order', { ascending: true })
         .limit(6);
 
       if (!error && data) {
